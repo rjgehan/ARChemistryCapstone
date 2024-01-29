@@ -1,105 +1,33 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width" />
-      <title>Ryan Gehan</title>
-      <!-- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"> -->
-      <meta name="description" content="Ryan Gehan" />
-      <meta property="og:title" content="Ryan Gehan" />
-      <meta property="og:description" content="Ryan Gehan" />
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-      <script src="https://cdn.tailwindcss.com"></script>
-   </head>
+<head>
+    <title>Your Game Title</title>
+    <style>
+        /* Basic styling to ensure the canvas fills the entire screen */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="unity-canvas"></canvas>
+    <script>
+        // Your Unity WebGL build will provide a JavaScript file to load the game
+        // Include that script here, something like:
+        // <script src="Build/YourBuildFileName.js"></script>
 
-   <body class="bg-white dark:bg-neutral-900 text-black dark:text-white overflow-x-hidden">
-      <div id="hero" class="p-8 border-b border-neutral-100 dark:border-neutral-800">
-         <h1 class="text-xl text-md font-medium">Ryan Gehan</h1>
-         <h2 class="text-sm opacity-60">Hamilton, NJ</h2>
-         <a href="https://www.linkedin.com/in/ryan-gehan/" class="px-0.5"><i class="fab fa-linkedin fa-md"></i></a>
-         <a href="https://github.com/ryangehan" class="px-0.5"><i class="fab fa-github fa-md"></i></a>
-         <a href="mailto:ryangehan@outlook.com" class="px-0.5"><i class="fas fa-envelope fa-md"></i></a>    
-      </div>
-
-      <li class="pb-4">
-         <div class="p-8">
-           <h3 class="text-md font-medium">About me</h3>
-         </div>
-         <div class="pl-8">
-           <div class="border border-neutral-100 dark:border-neutral-800 rounded-lg p-4 max-w-[90%]">
-             <p class="text-md opacity-60">
-               I am a senior at Loyola University Maryland pursuing a degree in Computer Science with a minor on Data Science. I have a passion for developing innovative solutions and am currently involved in projects that blend my interests in software development and data analytics.
-             </p>
-           </div>
-         </div>
-       </li>
-
-      <!-- Work Experience -->
-      <ul id="professional" class="border-b border-neutral-100 dark:border-neutral-800">
-         <li class="pb-8">
-            <div class="p-8">
-               <h3 class="text-md font-medium">Current Projects</h3>
-               <h4 class="text-md opacity-60">Web Development, Data Science</h4>
-            </div>
-
-            <div class="flex overflow-x-scroll no-scrollbar gap-6 px-8">
-               <div class="flex flex-col gap-2">
-                  <div class="w-60 h-60">
-                     <a href="https://github.com/rjgehan/CS482">
-                        <div class="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex justify-center items-center highlight">
-                           <!-- Replace with your project image -->
-                           <img src="./files/cardSpadesK.png" alt="7 Card Stud Game" />
-                        </div>
-                     </a>
-                  </div>
-                  <p class="text-sm opacity-40">Web-Based 7 Card Stud Game</p>
-               </div>
-
-               <div class="flex flex-col gap-2">
-                  <div class="w-60 h-60">
-                     <a href="https://github.com/ryangehan/CS489-Casino">
-                        <div class="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex justify-center items-center highlight">
-                           <!-- Replace with your project image -->
-                           <img src="./files/MetaMask.png" alt="Web-Based Casino with Crypto Integration" />
-                        </div>
-                     </a>
-                  </div>
-                  <p class="text-sm opacity-40">Web-Based Casino with Crypto Integration</p>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                    <div class="w-60 h-60">
-                       <a href="./DTB/index.html">
-                          <div class="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex justify-center items-center highlight">
-                             <!-- Replace with your project image -->
-                             <img src="./files/destiny.png" alt="7 Card Stud Game" />
-                          </div>
-                       </a>
-                    </div>
-                    <p class="text-sm opacity-40">Destiny Tool Belt</p>
-                 </div>
-            </div>
-         </li>
-
-         <!-- Add any other projects or work experience here -->
-
-      </ul>
-
-      <!-- Links -->
-      <ul id="other" class="p-8">
-         <li class="pb-8">
-            <h3 class="text-md font-medium pb-4">Links</h3>
-            <ul class="text-md opacity-60 flex flex-col gap-1">
-               <!-- Update with your resume and CV file paths -->
-               <li><a href="https://rjgehan.github.io/files/GehanResume2023.pdf">Resume</a></li>
-               <li><a href="https://rjgehan.github.io/documents/your_cv.pdf">CV</a></li>
-            </ul>
-         </li>
-
-         <!-- Any additional resources or links can be added here -->
-
-      </ul>
-   </body>
+        // Initialize the Unity game
+        // You will need to replace `YourBuildFileName` with the name of your Unity build
+        var gameInstance = UnityLoader.instantiate("unity-canvas", "Build/YourBuildFileName.json");
+    </script>
+</body>
 </html>
