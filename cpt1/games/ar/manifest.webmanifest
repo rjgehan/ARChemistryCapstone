@@ -1,6 +1,6 @@
 {
-    "name": "test1",
-    "short_name": "test1",
+    "name": "Capstone Test",
+    "short_name": "Capstone Test",
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#231F20",

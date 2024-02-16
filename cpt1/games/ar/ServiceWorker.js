@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-test1-1.0.0";
+const cacheName = "DefaultCompany-Capstone Test-0.1";
 const contentToCache = [
     "Build/ar.loader.js",
     "Build/ar.framework.js",
