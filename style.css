@@ -2,37 +2,54 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(10deg, #88bd9d 0%, #98b18f 50%, #dbf8db 100%);
-    text-shadow: 1px 1px 2px black, 0 1px 1px rgba(0, 0, 0, 0.15);
-
+    background: #F0F0F0;
 }
 
 .header {
-    background: linear-gradient(135deg, #29b605 0%, #174e02 50%, #082401 100%);
-    color: #d8cb18;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start to give room for the hamburger button */
+    background: #00B385;
+    color: #ffffff;
     padding: 1em 0;
     text-shadow: 1px 1px 2px black, 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.nav-bar {
-    display: flex;
-    justify-content: center;
-    background-color: #00440f;
-    padding: 0.5em 0;
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+.nav-bar {
+    position: fixed;
+    top: 5%; /* Adjust this value as needed to control how far from the top the nav-bar starts */
+    bottom: 0; /* Ensures it stretches to the bottom */
+    left: 0;
+    width: 250px;
+    background-color: #00B385;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px; /* Retain or adjust this padding-top as necessary */
+}
+
 
 .nav-bar a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 15px 25px;
     font-size: 1.2em;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav-bar a:hover {
-    color: #d8cb18;
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
 }
 
 .welcome-section {
@@ -40,22 +57,19 @@ body {
     text-align: center;
 }
 
-.welcome-section h1 {
-    color: #ffffff;
-    margin-bottom: 0; /* Remove margin to ensure text is closer to the image */
-}
-
+.welcome-section h1,
 .welcome-section p {
-    color: #fff;
-    margin-top: 0; /* Remove margin to ensure text is closer to the image */
+    color: #000000;
+    margin-top: 0;
 }
 
 .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
+    background-color: #00B385;
     color: white;
-    position: relative;
+    position:fixed;
+    justify-content: end;
     bottom: 0;
     width: 100%;
 }
@@ -65,4 +79,104 @@ body {
     height: 2px;
     background-color: black;
     margin: 20px 0;
+}
+
+.btn-hidden {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    min-height: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+    padding: 0 20px;
+    justify-self: start;
+    margin-right: auto;
+    visibility: hidden; /* Keeps it invisible */
+
+}
+
+/* Base button styles */
+.btn-menu {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    min-height: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+    padding: 0 20px;
+    justify-self: start;
+    margin-right: auto;
+}
+
+.btn-menu:focus {
+    outline: none;
+}
+
+.btn-menu__text {
+    margin-left: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Button bars */
+.btn-menu__bars {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 4px;
+    background-color: #ffffff; /* Assuming $primary is #00B385, replace it with your primary color variable value */
+    transition: .3s;
+}
+
+.btn-menu__bars:before,
+.btn-menu__bars:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Assuming $primary is #00B385, replace it with your primary color variable value */
+    transition: .3s;
+}
+
+.btn-menu__bars:before {
+    transform: translate(0, -11px);
+}
+
+.btn-menu__bars:after {
+    transform: translate(0, 11px);
+}
+
+/* Menu open state transformations */
+.menu-open .btn-menu__bars {
+    background-color: transparent;
+}
+
+.menu-open .btn-menu__bars:before {
+    transform: rotate(45deg);
+}
+
+.menu-open .btn-menu__bars:after {
+    transform: rotate(-45deg);
+}
+
+
+/* Existing .btn-menu and related styles remain unchanged */
+
+.menu-open .nav-bar {
+    transform: translateX(0); /* Slide in nav bar */
 }
