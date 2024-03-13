@@ -8,7 +8,8 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the start to give room for the hamburger button */
+    justify-content: flex-start;
+    /* Align items to the start to give room for the hamburger button */
     background: #00B385;
     color: #ffffff;
     padding: 1em 0;
@@ -24,8 +25,9 @@ h1 {
 
 .nav-bar {
     position: fixed;
-    top: 5%; /* Adjust this value as needed to control how far from the top the nav-bar starts */
-    bottom: 0; /* Ensures it stretches to the bottom */
+    top: 6%;
+    /* Adjust based on the header height */
+    bottom: 0;
     left: 0;
     width: 250px;
     background-color: #00B385;
@@ -35,8 +37,59 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 60px; /* Retain or adjust this padding-top as necessary */
+    padding-top: 60px;
+    /* Default padding-top */
 }
+
+/* Media query for screens smaller than 630px wide */
+@media (max-width: 700px) {
+    .nav-bar {
+        top: 7%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
+@media (max-width: 630px) {
+    .nav-bar {
+        top: 15%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
+@media (max-width: 430px) {
+    .nav-bar {
+        top: 10%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
+@media (max-width: 390px) {
+    .nav-bar {
+        top: 15%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
+@media (max-width: 414px) {
+    .nav-bar {
+        top: 15%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
+@media (max-width: 375px) {
+    .nav-bar {
+        top: 17%;
+        /* Example adjustment for smaller screens */
+        /* Other adjustments for smaller screens can go here */
+    }
+}
+
 
 
 .nav-bar a {
@@ -68,7 +121,7 @@ h1 {
     padding: 20px 0;
     background-color: #00B385;
     color: white;
-    position:fixed;
+    position: fixed;
     justify-content: end;
     bottom: 0;
     width: 100%;
@@ -85,7 +138,7 @@ h1 {
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content:left;
+    justify-content: left;
     min-height: 10px;
     padding-left: 0;
     padding-right: 0;
@@ -97,7 +150,8 @@ h1 {
     padding: 0 20px;
     justify-self: start;
     margin-right: auto;
-    visibility: hidden; /* Keeps it invisible */
+    visibility: hidden;
+    /* Keeps it invisible */
 
 }
 
@@ -106,7 +160,7 @@ h1 {
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content:left;
+    justify-content: left;
     min-height: 10px;
     padding-left: 0;
     padding-right: 0;
@@ -137,7 +191,8 @@ h1 {
     position: relative;
     width: 35px;
     height: 4px;
-    background-color: #ffffff; /* Assuming $primary is #00B385, replace it with your primary color variable value */
+    background-color: #ffffff;
+    /* Assuming $primary is #00B385, replace it with your primary color variable value */
     transition: .3s;
 }
 
@@ -149,7 +204,8 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; /* Assuming $primary is #00B385, replace it with your primary color variable value */
+    background-color: #ffffff;
+    /* Assuming $primary is #00B385, replace it with your primary color variable value */
     transition: .3s;
 }
 
@@ -178,5 +234,6 @@ h1 {
 /* Existing .btn-menu and related styles remain unchanged */
 
 .menu-open .nav-bar {
-    transform: translateX(0); /* Slide in nav bar */
+    transform: translateX(0);
+    /* Slide in nav bar */
 }
