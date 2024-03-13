@@ -52,7 +52,7 @@ h1 {
 
 @media (max-width: 630px) {
     .nav-bar {
-        top: 15%;
+        top: 17%;
         /* Example adjustment for smaller screens */
         /* Other adjustments for smaller screens can go here */
     }
@@ -60,7 +60,7 @@ h1 {
 
 @media (max-width: 430px) {
     .nav-bar {
-        top: 10%;
+        top: 12%;
         /* Example adjustment for smaller screens */
         /* Other adjustments for smaller screens can go here */
     }
@@ -68,7 +68,7 @@ h1 {
 
 @media (max-width: 390px) {
     .nav-bar {
-        top: 15%;
+        top: 17%;
         /* Example adjustment for smaller screens */
         /* Other adjustments for smaller screens can go here */
     }
@@ -76,7 +76,7 @@ h1 {
 
 @media (max-width: 414px) {
     .nav-bar {
-        top: 15%;
+        top: 17%;
         /* Example adjustment for smaller screens */
         /* Other adjustments for smaller screens can go here */
     }
@@ -84,7 +84,7 @@ h1 {
 
 @media (max-width: 375px) {
     .nav-bar {
-        top: 17%;
+        top: 19%;
         /* Example adjustment for smaller screens */
         /* Other adjustments for smaller screens can go here */
     }
