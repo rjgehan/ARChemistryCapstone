@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <title>Credits and Copyright</title>
+</head>
+
+<body>
+    <div class="header">
+        <button class="btn-menu" type="button">
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+        <h1>Credits and Copyright</h1>
+        <button class="btn-hidden" type="button">
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+    </div>
+    <div class="nav-bar">
+        <a href="./index.html">Home</a>
+        <a href="./ch1/index.html">Ch. 1 - Atoms & Atomic Structure</a>
+        <a href="./ch2/index.html">Ch. 2 - Electron Arrangements</a>
+        <a href="./ch3/index.html">Ch. 3 - Bonding</a>
+        <a href="./ch3.1/index.html">Ch. 3.1 - Covalent Bonding</a>
+        <a href="./aboutUs.html">About Us/Contact Us</a>
+        <a href="./Credits&Copyright.html">Credits & Copyright</a>
+    </div>
+
+
+    <main>
+        <section>
+            <p>Website Development: Ryan Gehan and Peter Pressley</p>
+            <h2>Copyright</h2>
+            <p>Unless otherwise noted, this website and its resources are published under the Creative Commons
+                Attribution-NonCommercial-NoDerivatives 4.0 International license. This license requires that reusers
+                give credit to the creator. It allows reusers to copy and distribute the material in any medium or
+                format in unadapted form only for noncommercial purposes.</p>
+            <ul>
+                <li><strong>BY:</strong> Credit must be given to you, the creator.</li>
+                <li><strong>NC:</strong> Only noncommercial use of your work is permitted. Noncommercial means not
+                    primarily intended for or directed towards commercial advantage or monetary compensation.</li>
+                <li><strong>ND:</strong> No derivatives or adaptations of your work are permitted.</li>
+            </ul>
+            <img class="CC" src="./resources/CC.PNG" alt="Creative Commons License">
+        </section>
+    </main>
+
+
+    <div class="footer">
+        <p>Unless otherwise noted, this website and its resources are published under the
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
+        <img class="CC" src="./resources/CC.PNG" alt="Creative Commons">
+    </div>
+    
+    <script>
+        var btnMenu = document.getElementsByClassName("btn-menu");
+        var body = document.body;
+        for (var i = 0; i < btnMenu.length; i++) {
+            btnMenu[i].addEventListener('click', function () {
+                body.classList.toggle('menu-open');
+            });
+        }
+    </script>
+</body>
+
+</html>

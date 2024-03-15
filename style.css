@@ -61,7 +61,7 @@ h1 {
 
 @media (max-width: 390px) {
     .nav-bar {
-        top: 5%;
+        top: 6%;
     }
 }
 
@@ -213,4 +213,21 @@ h1 {
 
 .menu-open .nav-bar {
     transform: translateX(0);
+}
+
+.CC {
+    max-width: 10%;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* h2 Elements Styling */
+h2 {
+    color: #005A9C;
+    margin-bottom: 10px;
 }
