@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-Ethane-1.0.0";
+const cacheName = "DefaultCompany-Ethane-0.1";
 const contentToCache = [
     "Build/Ethane.loader.js",
     "Build/Ethane.framework.js",
