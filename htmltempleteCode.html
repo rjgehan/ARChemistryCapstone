@@ -1,0 +1,64 @@
+<!-- created by Ryan Gehan -->
+<!-- use this as a templete for any future pages -->
+<!-- this will be updated regularly to ensure clarity -->
+<!-- this page is just a template, any changes to nav bar, footer, or header will need to be made on all index.html files -->
+<!-- any changes on this page will not change other pages, use this file to understand the code and then change the other files -->
+<!-- htmltempleteVisual.png is a visual replresentation of this page, use it as a reference -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <title>Tab Name</title> <!-- title displayed at the top of the browser (in the tab)-->
+</head>
+<body>
+    <div class="header">
+        <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+        <!-- above creates the hamburger button -->
+        <h1>Title</h1>
+        <!-- above is the title that shows on the top middle of site -->
+        <button class="btn-hidden" type="button">
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>    </div>
+        <!-- above creates an invisible hamburger button on the other side to balance the space out -->
+    <div class="nav-bar">
+        <a href="/index.html">Home</a>
+        <a href="/ch1/index.html">Ch. 1 - Atoms & Atomic Structure</a>
+        <a href="/ch2/index.html">Ch. 2 - Electron Arrangements</a>
+        <a href="/ch3/index.html">Ch. 3 - Bonding</a>
+        <a href="/ch3.1/index.html">Ch. 3.1 - Covalent Bonding</a>
+        <a href="/aboutUs.html">About Us/Contact Us</a>
+        <a href="/Credits&Copyright.html">Credits & Copyright</a>
+    </div>
+    <!-- above is the contents of the nav bar, copy and paste the below code into the above to add a new page to navigation menu (refer to instillation guide for pathToHTML and nameOfPage details) -->
+    <!-- <a href="/pathToHTML.html">nameOfPage</a> -->
+
+
+    <!-- put contents of site here -->
+
+    <div class="footer">
+        <p>Unless otherwise noted, this website and its resources are published under the
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
+        <img class="CC" src="/resources/CC.PNG" alt="Creative Commons">
+    </div>
+    <!-- above is code for footer -->
+
+    <!-- all code below is javascript for transitions and similar attributes-->
+    <script>
+        var btnMenu = document.getElementsByClassName("btn-menu");
+        var body = document.body;
+        for (var i = 0; i < btnMenu.length; i++) {
+            btnMenu[i].addEventListener('click', function () {
+                body.classList.toggle('menu-open');
+            });
+        }
+    </script>
+    <!-- code for opening of nav bar from the side -->
+</body>
+</html>
