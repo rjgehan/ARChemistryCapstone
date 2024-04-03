@@ -100,11 +100,11 @@ To create a new chapter:
 
 2.) In that folder, create another floder named "games".
 
-3.) Copy the htmlTempleteCode.html and change the following
+3.) Copy the htmlTempleteCode.html into a new file in the new chapter folder and name it "index.html", change the following 
  
 
- - Tab Name
- - Title
+ - Tab Name (what shows up at the top of the browser)
+ - Title (the name of the chapter ie "Atoms & Atomic Structure")
  
 4.) Paste the following code at the bottom of the "nav-bar" section under the other pages
 
