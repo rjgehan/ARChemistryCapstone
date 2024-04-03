@@ -1,3 +1,4 @@
+
 # ARChemistryCapstone
 
 ## Contributors
@@ -15,6 +16,7 @@ to examine these AR Experiences in one place.
 Each experience is a small unity game that allows the user to move or "fly" around the game objects and will be able to interact with them to make the objects display themselves combining.
 
 ## Installation Instructions
+### Experience Creation
 1.) To begin creating an experience you must first download Unity here: https://unity.com/download , this will download UnityHubSetup.exe  
     - Follow the setup executable and install Unity onto your computer.
     
@@ -64,22 +66,55 @@ Each experience is a small unity game that allows the user to move or "fly" arou
 15.) Save the project under File > Save, then File > Build Settings.  
       - The build settings window should appear.
     
-16.) Scroll and click on "WebGL", then click on Player Settings > Compression Format > Disabled
+16.) Scroll and click on "WebGL", if switch platform is available at the bottom, select it, then click on Player Settings > Compression Format > Disabled
 
-17.) Exit out the player settings window then select "Build"
+17.) Click "Resolution and Presentation" and select PWA
 
-18.) Choose the folder of your choice to build your new experience to.
+18.) Exit out the player settings window then select "Build"
 
-19.)  When the build is complete, copy the files and create a new folder in the ARChemistryCapstone Website under the "games" folder.
+19.) Choose the folder of your choice to build your new experience to.
 
-20.) Paste your files inside of your new folder.
+20.)  When the build is complete, copy the files and create a new folder in the ARChemistryCapstone Website under the "games" folder for the chapter that you would like to add the experience to.
 
-21.) Head to index.html and copy the hyper reference.  
-      - a href="/ch1/games/FOLDERNAME/"><img class="image" src="/resources/exp1.PNG" alt="exp1.png"/a
+21.) Paste your files inside of your new folder.
+
+22.) Head to index.html for the desired chapter and copy the hyper reference:  
+				   
+	<a href="/CHAPTER/games/FOLDERNAME/"><img class="image" src="/resources/IMAGE" alt="IMAGE DESCRIPTION"><a>
+
+23.) Change "CHAPTER" to your desired chapter. ie: ch1, ch2, ch3, ch3.1 etc...
     
-22.) Change "FOLDERNAME" to the name of the newly added folder in "games".
+24.) Change "FOLDERNAME" to the name of the newly added folder in "games".
 
-23.) Play your new experience on the website!
+25.) Take a screenshot of the game that you just made in Unity, save it, upload it to the resources folder and change "IMAGE" to the name ofthat new image. This will show on the website and hold the link to the experience.
+
+26.) Upload this new code to GitHub and wait a few minutes for the website to update everything.
+
+24.) Play your new experience on the website!
+
+### Website Editing
+The file htmlTempleteCode.html is meant to assist you in adding more chapters to the site. 
+To create a new chapter:
+
+1.) Create a new file under the "ARChemistryCapstone" folder, name it ch# with the # being the chapter number.
+
+2.) In that folder, create another floder named "games".
+
+3.) Copy the htmlTempleteCode.html and change the following
+ 
+
+ - Tab Name
+ - Title
+ 
+4.) Paste the following code at the bottom of the "nav-bar" section under the other pages
+
+    <a href="CHAPTER/index.html">NAME</a>
+
+5.) Change CHAPTER to the file name that you are in. ie ch1, ch2 etc...
+
+6.) Change NAME to the name of the page. ie "Ch. 1 - Atoms & Atomic Structure"
+
+ 
 ## How to Run
 
 ## How to Test
