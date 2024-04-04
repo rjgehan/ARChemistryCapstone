@@ -262,3 +262,22 @@ h2 {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 500px) {
+    .ethane-container {
+        margin: 10px 0; /* Less margin on smaller screens */
+    }
+
+    .ethane-title {
+        font-size: 16px; /* Smaller font size for the title */
+        margin-top: -15px; /* Adjust top margin so it's not too far from the image */
+        padding: 3px 0; /* Smaller padding for the title */
+    }
+
+    .image {
+        width: 95%; /* Image takes up full width of its container */
+        height: auto; /* Height is set to auto to maintain aspect ratio */
+        padding: 10px; /* Less padding on smaller screens */
+        margin: 10px 0; /* Adjust margin as needed */
+    }
+}
