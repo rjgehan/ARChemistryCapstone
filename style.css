@@ -8,13 +8,13 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     background: #00B385;
     color: #ffffff;
     padding: 1em;
     text-shadow: 1px 1px 2px black, 0 1px 1px rgba(0, 0, 0, 0.15);
-    position: relative; 
-    z-index: 2; 
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
@@ -113,6 +113,12 @@ h1 {
     width: 100%;
 }
 
+@media (max-width: 500px) {
+    .footer {
+        position: relative;
+    }
+}
+
 .line {
     border: none;
     height: 2px;
@@ -139,7 +145,6 @@ h1 {
     visibility: hidden;
 }
 
-/* Base button styles */
 .btn-menu {
     margin-right: auto;
     display: flex;
@@ -223,11 +228,37 @@ section {
     background: white;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* h2 Elements Styling */
 h2 {
     color: #005A9C;
     margin-bottom: 10px;
+}
+.ethane-container {
+    position: relative;
+    display: inline-block; 
+    margin: 20px 0;
+}
+
+.ethane-title {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: -5px; 
+    background: #FFFFFF;
+    color: #000000; 
+    padding: 5px 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+.image {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
