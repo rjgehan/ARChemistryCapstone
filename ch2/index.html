@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style.css" rel="stylesheet" type="text/css">
-    <title>Ch. 2 - Electron Arrangements</title>
+    <title>Electron Arrangements</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
         </button>
-        <h1>Ch. 2 - Electron Arrangements</h1>
+        <h1>Electron Arrangements</h1>
         <button class="btn-hidden" type="button">
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
@@ -31,7 +31,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Load Navbar
-            fetch('../navbar.html')
+            fetch('../navbarInner.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar-placeholder').innerHTML = html;

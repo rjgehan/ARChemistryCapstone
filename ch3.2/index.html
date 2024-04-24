@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <title>Ionic Bonding</title>
+</head>
+
+<body>
+    <div class="header">
+        <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+        <h1>Ionic Bonding</h1>
+        <button class="btn-hidden" type="button">
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+    </div>
+    <!-- Placeholder for the navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <section>
+        <p>
+            Ions are formed when atoms gain or lose electrons to achieve full or stable valence shells of electrons.
+            Metal atoms lose their valence electrons forming positive cations and the electrons are transferred to
+            non-metal atoms that form negative anions.
+
+            <br><br>
+
+            The resulting lattice of cations and anions has no overall charge so the ratio of cations to anions will
+            vary to achieve this depending on the charges of the ions involved. Multiple electrons can be transferred
+            between atoms but the octet rule of filling valence shells on the non-metal atoms must be observed. Multiple
+            non-metal atoms may be needed to accept all the donated electrons or multiple metal atoms may be needed to
+            supply electrons to complete the valence shell. Explore the experiences to see the movement of electrons to
+            form the charged ions.
+
+            <br><br>
+
+            The properties of ionic substances differ greatly from those of the raw elements.
+
+            <br><br>
+
+        <h3>Summary:</h3>
+        <ul>
+            <li>Takes place between metal and non-metal atoms.</li>
+            <li>Electrons are given and received by the atoms creating charged particles.</li>
+            <li>Giant lattices of these electrostatic ions are formed.</li>
+            <li>Positive ions are formed when atoms lose electrons – cations.</li>
+            <li>Negative ions are formed when atoms gain electrons – anions.</li>
+        </ul>
+
+        <div class="button-container">
+            <button onclick="window.open('https://app.vectary.com/p/6J4wlxkwqR9WuD6m3jtwQl/', '_blank')">Sodium
+                Chloride</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.open('https://app.vectary.com/p/4CFgmEeZVSdjMUWlWujjlf', '_blank')">Magnesium
+                Oxide</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.open('https://app.vectary.com/p/4DvgoljU5th4vfNYIAQMNV', '_blank')">Sodium
+                Oxide</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.open('https://app.vectary.com/p/4C5IUGAMCuYQ9iRSwDxISf', '_blank')">Aluminum
+                Oxide</button>
+        </div>
+        </p>
+    </section>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Navbar
+            fetch('../navbarInner.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Failed to load navbar:', error));
+
+            // Load Footer
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Failed to load footer:', error));
+
+            var btnMenu = document.getElementsByClassName("btn-menu");
+            var body = document.body;
+            for (var i = 0; i < btnMenu.length; i++) {
+                btnMenu[i].addEventListener('click', function () {
+                    body.classList.toggle('menu-open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

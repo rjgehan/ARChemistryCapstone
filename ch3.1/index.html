@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style.css" rel="stylesheet" type="text/css">
-    <title>Ch. 3.1 - Covalent Bonding</title>
+    <title>Covalent Bonding</title>
 </head>
+
 <body>
     <div class="header">
         <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
         </button>
-        <h1>Ch. 3.1 - Covalent Bonding</h1>
+        <h1>Covalent Bonding</h1>
         <button class="btn-hidden" type="button">
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
-        </button>    </div>
+        </button>
+    </div>
     <!-- Placeholder for the navbar -->
     <div id="navbar-placeholder"></div>
+
+    <section>
+        <p>
+            Covalent bonds are formed when non-metal atoms from the right hand side of the periodic table share pairs of
+            electrons in an attempt to achieve complete or stable valence shells.
+        </p>
+        <h3>Summary:</h3>
+        <ul>
+            <li>Takes place between non-metal atoms.</li>
+            <li>Sharing pairs of electrons between atoms.</li>
+            <li>From small molecules to giant structures.</li>
+            <li>Form 3-dimensional shapes to maximize electron pair separation.</li>
+            <li>Non-bonding and bonding pairs of electrons have differing repulsion effects.</li>
+        </ul>
+    </section>
+
+
+    <div class="button-container">
+        <button onclick="location.href='../SingleBonds/index.html'">Single Bonds</button>
+        <button onclick="location.href='../DoubleBonds/index.html'">Double Bonds and Beyond</button>
+    </div>
 
     <!-- Placeholder for the footer -->
     <div id="footer-placeholder"></div>
@@ -26,7 +50,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Load Navbar
-            fetch('../navbar.html')
+            fetch('../navbarInner.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar-placeholder').innerHTML = html;
@@ -51,4 +75,5 @@
         });
     </script>
 </body>
+
 </html>

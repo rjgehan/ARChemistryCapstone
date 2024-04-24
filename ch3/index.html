@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style.css" rel="stylesheet" type="text/css">
-    <title>Ch. 3 - Bonding</title>
+    <title>Bonding</title>
 </head>
+
 <body>
     <div class="header">
         <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
         </button>
-        <h1>Ch. 3 - Bonding</h1>
+        <h1>Bonding</h1>
         <button class="btn-hidden" type="button">
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
-        </button>    </div>
+        </button>
+    </div>
     <!-- Placeholder for the navbar -->
     <div id="navbar-placeholder"></div>
 
 
+    <section>
+        <p>There are around 100 different elements but there are countless compounds on Earth. These compounds occur
+            when atoms combine in different ways by bonding. Atoms bond to achieve stable electron arrangements and they
+            bond in different ways. Atoms come together in small groups or large lattices and structures, with similar
+            types of atoms or very different atoms. The properties of the bonded atoms are very different to the raw
+            elements.
+            <br><br>
 
-    
+            The experiences on these bonding pages will help you explore the way valence electrons on different atoms
+            interact and form a variety of covalent and ionic compounds. One key feature that these experiences provide
+            is the chance to explore the 3D shape of the molecules. Be sure to spin them around and look from multiple
+            angles.
+
+            <br><br>
+
+            Note: This chapter assumes knowledge of atoms, atomic structure, and electron arrangements. If this is an
+            area of struggle, start by reviewing Chapter 2 and come back when you’ve mastered the work.
+        </p>
+    </section>
+
+    <div class="button-container">
+        <button onclick="location.href='../ch3.1/index.html'">Covalent Bonding</button>
+        <button onclick="location.href='../ch3.2/index.html'">Ionic Bonding</button>
+    </div>
 
     <!-- Placeholder for the footer -->
     <div id="footer-placeholder"></div>
@@ -30,7 +55,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Load Navbar
-            fetch('../navbar.html')
+            fetch('../navbarInner.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar-placeholder').innerHTML = html;
@@ -55,4 +80,5 @@
         });
     </script>
 </body>
+
 </html>

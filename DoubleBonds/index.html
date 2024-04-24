@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <title>Double Bonds and Beyond</title>
+</head>
+
+<body>
+    <div class="header">
+        <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+        <h1>Double Bonds and Beyond</h1>
+        <button class="btn-hidden" type="button">
+            <i class="btn-menu__bars" aria-hidden="true"></i>
+            <span class="visually-hidden"></span>
+        </button>
+    </div>
+    <!-- Placeholder for the navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <section>
+        <p>Double, triple, and beyond contains molecules where bonds are formed when atoms are sharing pairs of
+            electrons, but these are more complex than the simple bonds. In some of these molecules double or triple
+            covalent bonds are created to achieve a full valence shell.
+
+            <div class="button-container">
+                <button onclick="window.open('https://www.vectary.com/p/5QAN7pIme0d2RypZIFR6iS', '_blank')">Oxygen</button>
+            </div>
+
+            Each oxygen atom has 6 valence electrons. To have a full valence shell of 8 electrons, oxygen shares two
+            electrons from each atom. This results in a total of 4 electrons shared as two pairs between the two nuclei
+            forming a double covalent bond.
+
+            <div class="button-container">
+                <button onclick="window.open('https://app.vectary.com/p/223r7oSZ2VFJ2DWmTGfEfg', '_blank')">Carbon Dioxide</button>
+            </div>
+
+            Oxygen has 6 valence electrons but to fill the valence shell it must share 2 electrons. Carbon has 4 valence
+            electrons. For interesting but complex reasons, carbon shares each of these with other atoms. In the case of
+            CO2, carbon shares two electrons with each oxygen making a total of 4 electrons on each side of the carbon
+            atom. This molecule is linear to evenly spread out the negative charge from the bonds and the remaining
+            non-bonding electrons on the two oxygen atoms. Be sure to rotate this molecule around to see it from all
+            angles.
+
+            <div class="button-container">
+                <button onclick="window.open('https://www.vectary.com/p/0M62FDb8KIIc667sRLP1PN', '_blank')">Nitrogen</button>
+            </div>
+
+            Nitrogen atoms have 5 valence electrons each. They will be stable with a full valence shell of 8 electrons
+            so must share 3 electrons each. The 3 pairs of electrons between the atoms result in a very strong, short
+            triple bond and an immensely stable molecule.
+
+            <br><br>
+
+            Ammonia and methane are in this section not because of their single bonds but because of their shapes. Both
+            form multiple single bonds but on paper the true molecular shape is hard to visualize. Rotate these
+            molecules to see the pyramidal and tetrahedral shapes they form.
+
+            <div class="button-container">
+                <button onclick="window.open('https://app.vectary.com/p/3DbQOczWyhUFRHcomArTCW', '_blank')">Methane</button>
+            </div>
+            <div class="button-container">
+                <button onclick="window.open('https://www.vectary.com/p/019YIuxebyxi8K9zIPNkxc', '_blank')">Ammonia</button>
+            </div>
+            <div class="button-container">
+                <button onclick="window.open('https://main.dd6towla4dcid.amplifyapp.com/ch1/games/EthaneC2H6/', '_blank')">Ethane</button>
+            </div>
+        </p>
+    </section>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Navbar
+            fetch('../navbarInner.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Failed to load navbar:', error));
+
+            // Load Footer
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Failed to load footer:', error));
+
+            var btnMenu = document.getElementsByClassName("btn-menu");
+            var body = document.body;
+            for (var i = 0; i < btnMenu.length; i++) {
+                btnMenu[i].addEventListener('click', function () {
+                    body.classList.toggle('menu-open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
