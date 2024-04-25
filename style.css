@@ -10,7 +10,14 @@ body {
     margin: 0;
     padding: 0;
     background: #F0F0F0;
-    min-height: 100vh;
+        
+}
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 30%;
+        min-height: 130vh;
+
+    }
 }
 
 .header {
@@ -24,7 +31,6 @@ body {
     position: sticky;
     z-index: 2;
     top: 0;
-
 }
 
 h1 {
