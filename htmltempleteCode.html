@@ -1,18 +1,18 @@
 <!-- created by Ryan Gehan -->
 <!-- use this as a templete for any future pages -->
-<!-- this will be updated regularly to ensure clarity -->
-<!-- this page is just a template, any changes to nav bar, footer, or header will need to be made on all index.html files -->
 <!-- any changes on this page will not change other pages, use this file to understand the code and then change the other files -->
 <!-- htmltempleteVisual.png is a visual replresentation of this page, use it as a reference -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet" type="text/css">
     <title>Tab Name</title> <!-- title displayed at the top of the browser (in the tab)-->
 </head>
+
 <body>
     <div class="header">
         <button class="btn-menu" type="button"> <!-- code derived from https://burger-generator.com/ -->
@@ -25,25 +25,26 @@
         <button class="btn-hidden" type="button">
             <i class="btn-menu__bars" aria-hidden="true"></i>
             <span class="visually-hidden"></span>
-        </button>    </div>
-        <!-- above creates an invisible hamburger button on the other side to balance the space out -->
-    <!-- Placeholder for the navbar -->
-    <div id="navbar-placeholder"></div>
-    <!-- above is the contents of the nav bar, copy and paste the below code into the above to add a new page to navigation menu (refer to instillation guide for pathToHTML and nameOfPage details) -->
-    <!-- <a href="/pathToHTML.html">nameOfPage</a> -->
+        </button>
+    </div>
+    <!-- above creates an invisible hamburger button on the other side to balance the space out -->
 
+    <div id="navbar-placeholder"></div>
+    <!-- above is the nav bar, any changes to it should be made in the navbarInner.html or navbarOuter.html -->
+    <!--  -->
 
     <!-- put contents of site here -->
+    <!-- This is where the buttons and text go -->
 
-    <!-- Placeholder for the footer -->
     <div id="footer-placeholder"></div>
-    <!-- above is code for footer -->
+    <!-- above is footer, same as navbar any ahcnges should be made in footer.html -->
 
     <!-- all code below is javascript for transitions and similar attributes-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Load Navbar
-            fetch('navbarInner.html')
+            fetch('navbarOuter.html')  //this file may change for new pages, if the new page you are making is in a folder, use navbarInner.html, if they are not in a folder, use navbarOuter.html
+            // you can mostly ignore the rest of this code, it just renders the footer and makes the navbar move smoothly
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar-placeholder').innerHTML = html;
@@ -67,6 +68,6 @@
             }
         });
     </script>
-    <!-- code for opening of nav bar from the side -->
 </body>
+
 </html>

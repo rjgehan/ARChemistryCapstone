@@ -105,14 +105,10 @@ To create a new chapter:
 
  - Tab Name (what shows up at the top of the browser)
  - Title (the name of the chapter ie "Atoms & Atomic Structure")
- 
-4.) Paste the following code at the bottom of the "nav-bar" section under the other pages
 
-    <a href="CHAPTER/index.html">NAME</a>
+4.) Change CHAPTER to the file name that you are in. ie ch1, ch2 etc...
 
-5.) Change CHAPTER to the file name that you are in. ie ch1, ch2 etc...
-
-6.) Change NAME to the name of the page. ie "Ch. 1 - Atoms & Atomic Structure"
+5.) Change NAME to the name of the page. ie "Ch. 1 - Atoms & Atomic Structure"
 
  
 ## How to Run
